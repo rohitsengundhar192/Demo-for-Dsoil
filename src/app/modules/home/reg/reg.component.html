@@ -1,0 +1,100 @@
+<mat-card class="outline">
+  <form [formGroup]="login">
+Name:<mat-form-field style="width: 30%; margin-left: 13%;" appearance="outline">
+  <input matInput placeholder="Enter Your FirstName" formControlName="fn">
+  <small *ngIf="fn?.invalid"></small>
+</mat-form-field>
+<mat-form-field style="width: 30%; margin-left: 5%;margin-top: 5%; ;" appearance="outline">
+  <input matInput placeholder="Enter Your LastName" formControlName="ln">
+  <small *ngIf="ln?.invalid"></small>
+</mat-form-field><br>
+<!-------------------------------------------------->
+
+Address:<mat-form-field style="width: 60%;height: 2%; margin-left: 10%; " appearance="outline">
+  <mat-label></mat-label>
+  <input matInput placeholder="" formControlName="add">
+  <small *ngIf="add?.invalid"></small>
+</mat-form-field><br>
+
+<mat-form-field style="width: 20%;height: 2%; margin-left: 20%; " appearance="outline">
+  <mat-label>City </mat-label>
+  <input matInput placeholder="" formControlName="city">
+  <small *ngIf="city?.invalid"></small>
+</mat-form-field>
+
+<mat-form-field appearance="fill" style="width: 20%; margin-left: 5%;" >
+  <small *ngIf="state?.invalid"></small>
+  <mat-label>State</mat-label>
+  <mat-select formControlName="state">
+    <mat-option value="option1">TamilNadu</mat-option>
+    <mat-option value="option2">Karnataka</mat-option>
+    <mat-option value="option3">Maharastra</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field style="width: 20%; margin-left: 5%; " appearance="outline" >
+  <mat-label>Zipcode </mat-label>
+  <input matInput placeholder="" formControlName="zip">
+  <small *ngIf="zip?.invalid"></small>
+</mat-form-field><br>
+
+Phone & Mail:<mat-form-field style="width: 30%; margin-left: 3.5%; " appearance="outline">
+  <mat-label>Phone </mat-label>
+  <input matInput placeholder="" formControlName="phone">
+  <small *ngIf="phone?.invalid"></small>
+</mat-form-field>
+<mat-form-field style="width: 30%; margin-left: 3.5%;" appearance="outline">
+  <mat-label>E-mail </mat-label>
+  <input matInput placeholder="" formControlName="em">
+  <small *ngIf="em?.invalid"></small>
+</mat-form-field><br>
+
+<!------------------------------------------------------------------------------->
+
+<div class="form-group">
+  <label for="password">Password</label>
+  <input
+      formControlName="password"
+      id="password"
+      type="password"
+      class="form-control">
+  <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
+      <div *ngIf="f.password.errors.required">Password is required.</div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="confirm_password">Confirm Password</label>
+  <input
+      formControlName="confirm_password"
+      id="confirm_password"
+      type="password"
+      class="form-control">
+  <div *ngIf="f.confirm_password.touched && f.confirm_password.invalid" class="alert alert-danger">
+      <div *ngIf="f.confirm_password.errors.required">Password is required.</div>
+      <div *ngIf="f.confirm_password.errors.confirmedValidator">Password and Confirm Password must be match.</div>
+  </div>
+</div>
+
+
+
+
+PassWord:<mat-form-field style="width: 40%; margin-left: 7%; " appearance="outline">
+  <mat-label>Password </mat-label>
+  <input type="password" matInput placeholder="" formControlName="pass">
+  <small *ngIf="pass?.invalid"></small>
+</mat-form-field><br>
+Re-Password:<mat-form-field style="width: 40%; margin-left: 3%; " appearance="outline">
+  <mat-label>Retype </mat-label>
+  <input type="password" matInput placeholder="" formControlName="repass">
+  <small *ngIf="repass?.invalid"></small>
+</mat-form-field><br>
+
+
+<!---------------------------------------------------------------------------------->
+
+<a><button mat-raised-button color="accent">Submit</button></a>
+</form>
+</mat-card>
+<router-outlet></router-outlet>
+

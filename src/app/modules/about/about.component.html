@@ -1,0 +1,21 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened >
+    <mat-nav-list style="width: 160px; height: 200px;" >
+      <a mat-list-item routerLink="about" style="height: 60px;">Who we are</a>
+      <a mat-list-item style="height: 60px;">our Vision<mat-icon>visibility</mat-icon></a>
+      <a mat-list-item style="height: 60px;">Our Leadership<mat-icon>perm_identity</mat-icon> </a>
+      <a mat-list-item style="height: 60px;">Our Masco    <mat-icon>perm_scan_wifi</mat-icon></a>
+      <a mat-list-item style="height: 60px;">Our Location  <mat-icon>location_city</mat-icon> </a>
+
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p style="height: 88vh;">
+    <router-outlet></router-outlet>
+  </p>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

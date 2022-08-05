@@ -1,0 +1,17 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-sidenav a:hover{
+color: rgb(203, 140, 4);
+}
+.mat-elevation-z5
+{
+  position: relative;
+  color: lavender;
+}
+.btn{
+  height: auto;
+ text-align: center;
+ width: 100%;
+ background-color: cadetblue;
+}

@@ -1,0 +1,52 @@
+<mat-toolbar color="Accent" class="mat-elevation-z5">
+  <mat-toolbar-row>
+    <span >DoorStep Oil</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button style="" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>settings</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+<!--Side Navigation-->
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened >
+    <mat-nav-list style="width: 200px;" >
+      <a mat-list-item routerLink="about" style="height: 30px;"><mat-icon>assignment_ind</mat-icon>About Us</a>
+      <a mat-list-item routerLink="oilforyou"style="height: 30px;"><mat-icon>opacity</mat-icon>Oil for You</a>
+      <a mat-list-item routerLink="ofe" style="height: 30px;"><mat-icon>invert_colors</mat-icon>Oil for Environment</a>
+      <a mat-list-item routerLink="wrl" style="height: 30px;"><mat-icon>record_voice_over</mat-icon>We are Listening</a>
+      <a mat-list-item routerLink="contactus" style="height: 30px;"><mat-icon>contact_support</mat-icon>Contact Us</a>
+
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <p style="height: 88vh;">
+
+    <router-outlet></router-outlet>
+    </p>
+    <a routerLink="reg" ><button class="btn"  mat-raised-button color="Accent">Login/Register</button></a>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+
+
+
+
